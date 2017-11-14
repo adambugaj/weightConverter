@@ -29,7 +29,7 @@ function kilograms() {
          inputN.value = "";
          inputN.placeholder = "Enter kilograms...";
     
-    document.getElementsById("lbsInput").addEventListener("input", function(e) {
+    document.getElementById("lbsInput").addEventListener("input", function(e) {
     
     document.getElementById("output").style.visibility = "visible";
     
