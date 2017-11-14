@@ -9,9 +9,17 @@
     <style>
         body {
             margin-top: 70px;
-            background: #333;
+            background: #222;
             color:#fff;
-            font-size: 12px;
+            font-size: 13px;
+        }
+        h4 {
+            font-size: 24px;
+   
+        }
+        
+        .card-block {
+            margin: 12px;
         }
     
     </style>
@@ -22,36 +30,34 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 offset-md-3">
                 <h1 class="display-4 text-center mb-3">Weight Converter</h1>
-                <div id="output">
+                
                     <form>
                         <div class="form-group">
-                            <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter punds..."> 
-                        </div>                
-                    </form>
-                    <div class="card bg-primary mb-2">
-                        <div class="card-block">
-                            <h4 class="font-weight-light">Grams:</h4>
-                            <div id="gramsOutput"></div>
-                    
-                        </div>                
-                    </div>
-                    <div class="card bg-success mb-2">
-                        <div class="card-block">
-                            <h4 class="font-weight-light">Kilograms:</h4>
-                            <div id="kgOutput"></div>
-                    
-                        </div>                
-                    </div>
-                    <div class="card bg-danger mb-2">
-                        <div class="card-block">
-                            <h4 class="font-weight-light">Ounces:</h4>
-                            <div id="ozOutput"></div>
-                
-                        </div>                
-                    </div>           
-                </div>        
+                            <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter pounds..."> 
+                        </div> 
+                    <div id="output">
+                        </form>
+                        <div class="card bg-primary mb-2">
+                            <div class="card-block">
+                                <h4 class="font-weight-light">Grams:</h4>
+                                <div id="gramsOutput"></div>
+                            </div>                
+                        </div>
+                        <div class="card bg-success mb-2">
+                            <div class="card-block">
+                                <h4 class="font-weight-light">Kilograms:</h4>
+                                <div id="kgOutput"></div>
+                            </div>                
+                        </div>
+                        <div class="card bg-danger mb-2">
+                            <div class="card-block">
+                                <h4 class="font-weight-light">Ounces:</h4>
+                                <div id="ozOutput"></div>
+                            </div>                
+                        </div>           
+                    </div>        
             </div>     
         </div>
     </div>
