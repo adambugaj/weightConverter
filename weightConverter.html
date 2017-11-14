@@ -21,7 +21,10 @@
         .card-block {
             margin: 12px;
         }
-    
+        
+        .radio label {
+            padding: 7px;
+        }
     </style>
     <title>Weight Converter</title>
 </head>
@@ -35,24 +38,37 @@
                 
                     <form>
                         <div class="form-group">
-                            <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter pounds..."> 
+                            <input id="lbsInput" name="inputNumber" type="number" class="form-control form-control-lg" placeholder="Enter grams..."> 
                         </div> 
+                        
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="checkboxes" id="option" value="option1" onclick="grams()" checked> Grams
+                        </label>
+                         <label>
+                            <input type="radio" name="checkboxes" id="option2" value="option2" onclick="kilograms()"> Kilograms
+                        </label>
+                         <label>
+                            <input type="radio" name="checkboxes" id="option3" value="option3" onclick="ounces()"> Ounces
+                        </label> 
+                    </div>
+                              
                     <div id="output">
                         </form>
-                        <div class="card bg-primary mb-2">
-                            <div class="card-block">
+                        <div class="card bg-primary mb-2" id="resultList">
+                            <div class="card-block" id="grams">
                                 <h4 class="font-weight-light">Grams:</h4>
                                 <div id="gramsOutput"></div>
                             </div>                
                         </div>
                         <div class="card bg-success mb-2">
-                            <div class="card-block">
+                            <div class="card-block" id="kilograms">
                                 <h4 class="font-weight-light">Kilograms:</h4>
                                 <div id="kgOutput"></div>
                             </div>                
                         </div>
                         <div class="card bg-danger mb-2">
-                            <div class="card-block">
+                            <div class="card-block" id="ounces">
                                 <h4 class="font-weight-light">Ounces:</h4>
                                 <div id="ozOutput"></div>
                             </div>                
