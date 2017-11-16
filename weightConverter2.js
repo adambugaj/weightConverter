@@ -27,14 +27,14 @@ function convert(numberValue) {
 
     }
     else if (document.getElementById("option2").checked === true) {
-        grams = numberValue / 2;
-        pounds = numberValue /3;
-        ounces = numberValue /4;
+        grams = (numberValue / 0.001).toFixed(4);
+        pounds = (numberValue / 0.453592).toFixed(2);
+        ounces = (numberValue / 16).toFixed(3);
     }
     else {
-        grams = numberValue / 2;
-        kilograms = numberValue /3;
-        ounces = numberValue /4;
+        grams = (numberValue / 0.035274).toFixed(3);
+        kilograms = (numberValue / 35.274).toFixed(3);
+        ounces = (numberValue / 16).toFixed(3);
     }
 
     store = [grams, kilograms, ounces, pounds];
@@ -55,9 +55,18 @@ function showValue(grams, kilograms, ounces, pounds) {
         else if (document.getElementById("option2").checked === true) {
             document.getElementById("grams").innerHTML = '<h4 class="font-weight-light">Grams:</h4><div id="gramsOutput">'+grams+'</div></div></div>';
     
-            document.getElementById("kilograms1").innerHTML = '<h4 class="font-weight-light">Pounds:</h4><div id="pounds">'+pounds+'</div></div></div>';
+            document.getElementById("kilograms1").innerHTML = '<h4 class="font-weight-light">Pounds:</h4><div id="pounds">'+pounds+'</div>';
     
-            document.getElementById("ounces").innerHTML = '<h4 class="font-weight-light">Ounces:</h4><div id="ozOutput">'+ounces+'</div></div></div>';
+            document.getElementById("ounces").innerHTML = '<h4 class="font-weight-light">Ounces:</h4><div id="ozOutput">'+ounces+'</div>';
+        }
+        else {
+            
+            document.getElementById("grams").innerHTML = '<h4 class="font-weight-light">Grams:</h4><div id="gramsOutput">'+grams+'</div>';
+    
+            document.getElementById("kilograms1").innerHTML = '<h4 class="font-weight-light">Kilograms:</h4><div id="kgOutput">'+kilograms+'</div>';
+    
+            document.getElementById("ounces").innerHTML = '<h4 class="font-weight-light">Pounds:</h4><div id="pounds">'+pounds+'</div>';
+            
         }
             
  
